@@ -21,7 +21,24 @@ export const actionCreators = {
 }
 
 const initialState = {
-  items: [{label: 'Click to remove', completed: false}, {label: 'Learn React Native', completed: false}, {label: 'Write Code', completed: false}, {label: 'Ship App', completed: false}],
+  items: [
+    {
+      label: 'Click to remove',
+      completed: false
+    },
+    {
+      label: 'Learn React Native',
+      completed: false
+    },
+    {
+      label: 'Write Code',
+      completed: false
+    },
+    {
+      label: 'Ship App',
+      completed: false
+    }
+  ],
 }
 
 export const reducer = (state = initialState, action) => {

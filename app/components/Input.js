@@ -20,16 +20,12 @@ export default class Input extends Component {
   }
 
   onChangeText = (text) => {
-    console.log('onChangeText ' + text)
     this.setState({text})
   }
 
   onSubmitEditing = () => {
-    console.log('onSubmitEditing1 ' + text)
     const {onSubmit} = this.props
     const {text} = this.state
-
-    console.log('onSubmitEditing2 ' + text)
 
     if (!text) return
 
@@ -38,7 +34,7 @@ export default class Input extends Component {
   }
 
   render() {
-    const {onSubmit, placeholder} = this.props
+    const {placeholder} = this.props
     const {text} = this.state
 
     return (
@@ -48,8 +44,6 @@ export default class Input extends Component {
         value={text}
         onChangeText={this.onChangeText}
         onSubmitEditing={this.onSubmitEditing}
-        blurOnSubmit={false}
-        multiline={false}
       />
     )
   }
